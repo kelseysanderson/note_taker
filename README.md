@@ -22,6 +22,8 @@
   ## Usage
   Following installation, open the terminal in the new directory and enter `npm run watch`. Then on your browser you will enter localhost:8080 into the url bar and this will bring you to the note taker application.
 
+  ![Kelsey Sanderson Portfolio Screencapture](./assets/notepage.jpg)
+
   ## License
   Read more about the license here:
   https://opensource.org/licenses/MIT
