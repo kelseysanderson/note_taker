@@ -12,7 +12,6 @@ module.exports = (app) => {
     });
 
     app.post('/api/notes', (req, res) => {
-
             let newNotes = req.body;
             db.push(newNotes);
             let notesJSON = JSON.stringify(db)
