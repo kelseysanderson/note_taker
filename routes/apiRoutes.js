@@ -1,6 +1,6 @@
 const fs = require('fs');
 const db = require("../db/db.json");
-const uniqID = require('uniqid')
+
 
 
 module.exports = (app) => {
@@ -12,17 +12,14 @@ module.exports = (app) => {
     });
 
     app.post('/api/notes', (req, res) => {
-        let newNotes = req.body 
-        db.push(newNotes);
-        let notesJSON = JSON.stringify(db)
-        fs.writeFile('./db/db.json', notesJSON, function (err) {
-            if (err) return console.log(err); 
-    });
-    });
 
-    // app.delete('api/notes', (req,res) => {
-
-    // })
+            let newNotes = req.body;
+            db.push(newNotes);
+            let notesJSON = JSON.stringify(db)
+            fs.writeFile('./db/db.json', notesJSON, function (err) {
+                if (err) return console.log(err); 
+        });
+    });
 }
 
 
